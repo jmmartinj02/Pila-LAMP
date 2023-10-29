@@ -12,11 +12,13 @@
 ## Configuración base
 + Configuración de vagrantfile.
 >*Este es el contenido que debemos tener en nuestro archivo para que todo se configure correctamente:*
-![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/26829eee-100d-4f2a-9628-55b95a3c176f)
+>![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/26829eee-100d-4f2a-9628-55b95a3c176f)
 + Estos son los scripts que usaremos para que ambas máquinas estén listas al iniciarlas.
 >*Script de la máquina Apache:*
+>
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/ff60dc89-477e-41cd-be2b-d3c57bc11fd4)
->*Script de la máquina MariaDB:*
+>
+>*Script de la máquina MariaDB:*  
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/58fee5f8-b14b-458e-8619-58878df11c9c)
 ## Configuración Apache y PHP
 + Despues de inciar las máquinas con vagrant up y de hacer un vagrant provision, iniciamos la maquina de apache con vagrant ssh JoseMMartApache, donde creamos y modificamos el archivo info.php en el directorio /var/www/html.
