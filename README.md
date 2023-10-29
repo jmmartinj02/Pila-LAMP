@@ -25,7 +25,7 @@
 >*Aqui se puede observar el contenido del archivo*
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/0fa43350-3222-442c-8330-e6ad34c1e7f2)
 + Comprobamos desde nuestro navegador que podemos acceder al archivo, utilizando la ip de la máquina que tiene apache:
->*Se puede observar en la barra de navegación que es necesario escribir.*
+>*Se puede observar en la barra de navegación qué es necesario escribir.*
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/d821f401-558b-407e-a94a-ef583ac7bdc9)
 + Realizamos una clonación de los archivos de los repositorios remotos a la máquina Apache con este comando y le cambiamos el nombre a uno mas sencillo:
 >*Se puede observar en que directorio debemos realizar la clonación y el nombre que le damos.*
