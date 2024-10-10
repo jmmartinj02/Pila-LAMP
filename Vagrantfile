@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
 
   #MISMO BOX PARA AMBAS
-  config.vm.box = "debian/buster64"
+  config.vm.box = "debian/jammy64"
   config.vm.define "JoseMMartApache" do |m1|
 	m1.vm.hostname = "JoseMMartApache"
   	m1.vm.network "private_network", ip: "172.16.2.14"
