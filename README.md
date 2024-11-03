@@ -56,7 +56,6 @@
 + Creamos el usuario entrando en mysql como root y proporcionamos permisos:
 >*Le colocamos al usuario la IP de la máquina con Mariadb, porque será hacia ella con la que accederemos de forma remota.*
 >![image](https://github.com/user-attachments/assets/24066053-8661-42f5-a1d8-9fe331751f8c)
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/d3cac8fc-216a-44ab-8e34-a6b0642e83ca)
 ## Comprobación de funcionamiento
 + Volvemos a la máquina de Apache e iniciamos sesión con el usuario creado anteriormente en mysql usando la IP de la máquina con Mysql y accedemos a la base de datos.
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/27f253a1-363b-4e83-bede-a5be3fb99951)
