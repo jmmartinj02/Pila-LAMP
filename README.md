@@ -24,39 +24,46 @@
 + Despues de inciar las máquinas con vagrant up y de hacer un vagrant provision, iniciamos la maquina de apache con vagrant ssh JoseMMartApache, donde creamos y modificamos el archivo info.php en el directorio /var/www/html.
 >*Aquí se puede observar el contenido del archivo*
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/0fa43350-3222-442c-8330-e6ad34c1e7f2)
-+ Comprobamos desde nuestro navegador que podemos acceder al archivo, utilizando la ip de la máquina que tiene apache:
->*Se puede observar en la barra de navegación qué es necesario escribir.*
++ Comprobamos desde nuestro navegador que podemos acceder al archivo, utilizando la ip de la máquina que tiene apache, si se muestra significa que la máquina Apache funciona correctamente:
+>*Se puede observar en la barra de navegación lo que es necesario escribir (172.16.2.14/info.php).*
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/d821f401-558b-407e-a94a-ef583ac7bdc9)
 + Realizamos una clonación de los archivos de los repositorios remotos a la máquina Apache con este comando y le cambiamos el nombre a uno mas sencillo:
 >*Se puede observar en qué directorio debemos realizar la clonación y el nombre que le damos.*
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/edde7382-b53e-416a-98ac-5fa7d562bda8)
-![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/9e8fbc0b-8f3b-49c8-bee4-917d823024d3)
-+ Modificamos en la máquina de Apache el archivo config.php del directorio /var/www/html/LAMP/src
+>![image](https://github.com/user-attachments/assets/8c170be3-0f18-4c22-a506-4e4189d40dba)
+>*Entramos en la nueva carpeta, en SRC y movemos su contenido directamente al directorio LAMP:*
+![image](https://github.com/user-attachments/assets/0dd2e190-5f3d-4df3-95e2-d9fa9e9c5b3d)
++ Modificamos el archivo config.php del directorio /var/www/html/LAMP
 >*Introducimos el nombre de la base datos, usuario, contraseña que crearemos mas adelante y la dirección IP de la máquina con Mariadb.
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/71a1cd4e-9f45-4aef-9648-838076ea11d3)
-+ A continuación nos dirigimos al directorio /etc/apache2/sites-available y editamos el archivo 000-default.conf, añadimos el directorio clonado y su subdirectorio src en DocumentRoot:
->*Añadimos a DocumentRoot LAMP/src*
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/a590e9d5-e334-45ea-b6c2-1e2b167861a5)
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/6940464d-92f7-4ea3-b660-d2636fb64ade)
+>![image](https://github.com/user-attachments/assets/eb80d428-c609-4855-81cd-4768710e22ae)
++ Creamos en el directorio (/etc/apache2/sites-available) el archivo LAMP.conf que será una copia del archivo 000-default.conf.
++ Editamos el archivo LAMP.cnf, añadimos el directorio clonado en DocumentRoot:
+>*Añadimos a DocumentRoot LAMP*
+>![image](https://github.com/user-attachments/assets/1b059d47-fe3c-4362-859b-86cf2dd286b6)
+>![image](https://github.com/user-attachments/assets/d615de2c-fc0d-46e2-950c-99ecf15dbfd7)
++ Habilitamos el archivo con este comando:
+>![image](https://github.com/user-attachments/assets/6498833e-fd22-444b-857a-2d3ff6b57825)
++ Deshabilitamos el antiguo fichero de configuración.
+>![image](https://github.com/user-attachments/assets/b9c7f273-1e04-4498-ac18-e5bb2429cd99)
 ## Configuración de MariaDB
 + Cambiamos de máquina y modificamos el archivo en el que se especifica a que servidor debe "enlazarse" el cliente, donde colocaremos la IP de nuestra máquina que tiene MariaDB.
 >*El archivo se encuentra en /etc/mysql/mariadb.conf.d .La IP de la máquina que tiene MariaDB en nuestro caso es: 172.16.2.15*
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/a5b75ee4-e365-4beb-9bf5-a5d62069fd99)
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/c7f07ad9-e183-4d7a-8061-bc9d40f9300b)
++ Clonamos el repositorio, para importar la base de datos:
+>![image](https://github.com/user-attachments/assets/6e56b027-15b8-43aa-9db9-d1e9a604f786)
++ Importamos la base de datos:
+>![image](https://github.com/user-attachments/assets/bc9ca53c-3204-4a32-96ee-728693ea627c)
 + Creamos el usuario entrando en mysql como root y proporcionamos permisos:
 >*Le colocamos al usuario la IP de la máquina con Mariadb, porque será hacia ella con la que accederemos de forma remota.*
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/953cfba4-1ec8-4bd7-a6eb-1a30a4fefdfa)
+>![image](https://github.com/user-attachments/assets/24066053-8661-42f5-a1d8-9fe331751f8c)
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/d3cac8fc-216a-44ab-8e34-a6b0642e83ca)
-+ Creamos la base de datos que se encuentra en la carpeta compartida:
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/ed039ded-b2e3-45da-aa34-d3ac4422970e)
 ## Comprobación de funcionamiento
 + Volvemos a la máquina de Apache e iniciamos sesión con el usuario creado anteriormente en mysql usando la IP de la máquina con Mysql y accedemos a la base de datos.
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/27f253a1-363b-4e83-bede-a5be3fb99951)
-+ Finalmente con la IP con la que estamos ejecutando ambas máquinas, en mi caso 192.168.137.118 y el puerto que hemos configurado en el vagrantfile al principio.
->*En la barra de busqueda tendríamos que poner algo tal que así http://192.168.137.118:8080*
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/3e58fbcd-1d7b-4cc2-bbd4-2cac45d43701)
++ Finalmente introducimos en el navegador la ip del servidor apache, en mi caso 172.16.2.14.
+>*En la barra de busqueda tendríamos que poner algo tal que así http://172.16.2.14*
+>![image](https://github.com/user-attachments/assets/8bbb833b-3c0e-48fe-bc6c-5992398dee37)
 + Para comprobar que todo se ha hecho correctamente introducimos información en la base de datos.
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/2f5bf630-c1b2-4090-94d1-b860168ebc39)
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/4f74adb4-bdd8-4428-87b9-aa6ce80d0258)
+>![image](https://github.com/user-attachments/assets/e70a3f6f-3361-42ab-a62a-29602fb4b98b)
 ## Conclusión
-+ He de decir, que ha sido un quebradero de cabeza, no es muy difícil esta práctica, pero el problema reside en mi impaciencia al sufrir algún fallo, ya que al hacer algún vagrant reload he terminado el proceso antes de que acabara, provocando que la máquina se volviese inservible, teniendo que hacer configuraciones desde cero, no ha sido un reto muy complicado, creo que debería de tomarme las cosas con más calma y pensar un poco más antes de actuar.
++ Una infraestructura sencilla, dos niveles, no hay muchas complicaciones, pero en ciertos puntos uno puede lelgar a perderse, o que algo no funcione, normalmente suele ser algún error de sintaxis, en mi caso porque en el bind-address coloqué 127.16.2.15 en lugar de 172.16.2.15.
