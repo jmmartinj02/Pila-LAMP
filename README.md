@@ -16,7 +16,7 @@
 + Estos son los scripts que usaremos para que ambas máquinas estén listas al iniciarlas.
 >*Script de la máquina Apache:*
 >
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/ff60dc89-477e-41cd-be2b-d3c57bc11fd4)
+>![image](https://github.com/user-attachments/assets/43cbb20a-adeb-4151-af45-66111e347153)
 >
 >*Script de la máquina MariaDB:*  
 >![image](https://github.com/user-attachments/assets/6a4039b4-9064-471a-80f2-65ae2582f355)
