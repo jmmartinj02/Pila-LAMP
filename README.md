@@ -58,11 +58,11 @@
 >![image](https://github.com/user-attachments/assets/24066053-8661-42f5-a1d8-9fe331751f8c)
 ## Comprobación de funcionamiento
 + Volvemos a la máquina de Apache e iniciamos sesión con el usuario creado anteriormente en mysql usando la IP de la máquina con Mysql y accedemos a la base de datos.
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/27f253a1-363b-4e83-bede-a5be3fb99951)
+>![image](https://github.com/user-attachments/assets/0b99cc7d-dfa7-4a25-a8a7-92c4e832a8d8)
 + Finalmente introducimos en el navegador la ip del servidor apache, en mi caso 172.16.2.14.
 >*En la barra de busqueda tendríamos que poner algo tal que así http://172.16.2.14*
 >![image](https://github.com/user-attachments/assets/8bbb833b-3c0e-48fe-bc6c-5992398dee37)
 + Para comprobar que todo se ha hecho correctamente introducimos información en la base de datos.
 >![image](https://github.com/user-attachments/assets/e70a3f6f-3361-42ab-a62a-29602fb4b98b)
 ## Conclusión
-+ Una infraestructura sencilla, dos niveles, no hay muchas complicaciones, pero en ciertos puntos uno puede lelgar a perderse, o que algo no funcione, normalmente suele ser algún error de sintaxis, en mi caso porque en el bind-address coloqué 127.16.2.15 en lugar de 172.16.2.15.
++ Una infraestructura sencilla, dos niveles, no hay muchas complicaciones, pero en ciertos puntos uno puede llegar a perderse, o que algo no funcione, normalmente suele ser algún error de sintaxis, en mi caso porque en el bind-address coloqué 127.16.2.15 en lugar de 172.16.2.15.
