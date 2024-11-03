@@ -19,7 +19,7 @@
 >![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/ff60dc89-477e-41cd-be2b-d3c57bc11fd4)
 >
 >*Script de la máquina MariaDB:*  
->![image](https://github.com/jmmartinj02/Pila-LAMP/assets/146434706/58fee5f8-b14b-458e-8619-58878df11c9c)
+>![image](https://github.com/user-attachments/assets/6a4039b4-9064-471a-80f2-65ae2582f355)
 ## Configuración Apache y PHP
 + Despues de inciar las máquinas con vagrant up y de hacer un vagrant provision, iniciamos la maquina de apache con vagrant ssh JoseMMartApache, donde creamos y modificamos el archivo info.php en el directorio /var/www/html.
 >*Aquí se puede observar el contenido del archivo*
