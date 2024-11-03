@@ -18,14 +18,14 @@ Vagrant.configure("2") do |config|
   config.vm.define "JoseMMartApache" do |m1|
 	m1.vm.hostname = "JoseMMartApache"
   	m1.vm.network "private_network", ip: "172.16.2.14"
-	m1.vm.provision "shell", path: "scriptApache2.sh"
+	m1.vm.provision "shell", path: "scriptapache2.sh"
 	m1.vm.network "forwarded_port", guest: 80, host: 8080
   end
   config.vm.define "JoseMMartMysql" do |m2|
 	m2.vm.hostname = "JoseMMartMysql"
   	m2.vm.network "private_network", ip: "172.16.2.15"
 	m2.vm.synced_folder "./clonado", "/vagrant"
-	m2.vm.provision "shell", path: "scriptMariaDB.sh"
+	m2.vm.provision "shell", path: "scriptmariaDB.sh"
   end
 
 
